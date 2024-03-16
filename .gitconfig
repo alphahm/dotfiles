@@ -1,6 +1,6 @@
 [alias]
     a = add
-    c = commit
+    c = commit -m
     ca = commit --amend
     co = checkout
     cb = checkout -b
@@ -9,5 +9,7 @@
     lol = log --graph --oneline
     pl = pull
     ps = push
+    psf = push --force-with-lease
+    psu = push --set-upstream origin
     s = status -s -b
     st = stash

@@ -1,1 +1,12 @@
 alias g="git"
+alias ga='git add'
+alias gc='git commit'
+alias gco='git checkout'
+alias gc!='git commit --amend'
+alias gl='git log --graph --oneline'
+alias gpl='git pull'
+alias gps='git push'
+alias gps!='git push --force-with-lease'
+alias gs='git status -s -b'
+alias gst='git stash'
+alias gst!='git stash pop'

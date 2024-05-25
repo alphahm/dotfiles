@@ -16,6 +16,9 @@ set expandtab softtabstop=4 shiftwidth=4 tabstop=4
 set autoindent
 set smartindent
 
+set ttimeout
+set ttimeoutlen=100
+
 " search
 set incsearch
 " center search results, jumps etc.

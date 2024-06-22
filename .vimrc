@@ -1,8 +1,15 @@
+" vim: foldmethod=marker
+
+" general {{{
+set encoding=utf-8
 let mapleader = " "
-syntax on
+set background=dark
+set noerrorbells visualbell t_vb=
 set number relativenumber
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.cache,*.dll,*.DS_Store,*.rdb,*.db,*.sqlite
 set wildignore+=__pycache__/*,venv/*,env/*,.git/*,build/*,node_modules/*,dist/*
+set backspace=indent,eol,start
+set cursorline
 set showmatch
 set title
 set ruler
@@ -11,13 +18,15 @@ set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:�
 " change cursor shape in insert/normal
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-" indentation
+set ttimeout
+set ttimeoutlen=100
+
+" code
+syntax on
+filetype plugin indent on
 set expandtab softtabstop=4 shiftwidth=4 tabstop=4
 set autoindent
 set smartindent
-
-set ttimeout
-set ttimeoutlen=100
 
 " search
 set incsearch
@@ -31,18 +40,16 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
+" }}}
 
-" buffers
+" buffers {{{
 set hidden
-" toggle between two buffers
-nnoremap <leader><Tab> <C-^>
-" navigate between buffers with <leader> n (next) and N (previous)
-nnoremap <leader>n :bnext<cr>
-nnoremap <leader>N :bprev<cr>
-" better way to close current buffer by first going to previous buffer and
-" closing old current
-nnoremap <leader>q :bp\|bd #<cr>
+" toggle buffers with easier shortcut
+nnoremap <silent> <Right> :bnext<cr>
+nnoremap <silent> <Left> :bprev<cr>
+" }}}
 
-" windows
+" windows {{{
 " split below and right by default
 set splitbelow splitright
+" }}}

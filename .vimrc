@@ -53,3 +53,18 @@ nnoremap <silent> <Left> :bprev<cr>
 " split below and right by default
 set splitbelow splitright
 " }}}
+
+
+" plugins {{{
+call plug#begin()
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
+Plug 'unblevable/quick-scope'
+
+call plug#end()
+
+" }}}

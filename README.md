@@ -16,6 +16,14 @@ curl -fLo ~/.config/vim/autoload/plug.vim --create-dirs \
 vim +'PlugInstall --sync' +qa
 ```
 
+## tmux
+
+```shell
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+`Ctrl` + `a` `I` to install plugins.
+
 
 ## Misc
 

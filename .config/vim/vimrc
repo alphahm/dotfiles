@@ -68,3 +68,9 @@ Plug 'unblevable/quick-scope'
 call plug#end()
 
 " }}}
+
+" fzf {{{
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>g :Rg<cr>
+nnoremap <leader>b :Buffers<cr>
+" }}}

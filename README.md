@@ -15,3 +15,15 @@ curl -fLo ~/.config/vim/autoload/plug.vim --create-dirs \
 ```shell
 vim +'PlugInstall --sync' +qa
 ```
+
+
+## Misc
+
+### Fonts
+
+* Monaco Nerd Fonts
+
+```shell
+git clone https://github.com/Karmenzind/monaco-nerd-fonts
+cp -r monaco-nerd-fonts/fonts/ /usr/share/fonts/monaco-nerd-fonts
+```

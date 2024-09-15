@@ -60,6 +60,7 @@ call plug#begin()
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
@@ -73,4 +74,17 @@ call plug#end()
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>g :Rg<cr>
 nnoremap <leader>b :Buffers<cr>
+" }}}
+
+" lightline {{{
+set laststatus=2
+let g:lightline = {
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'FugitiveHead'
+    \ },
+    \ }
 " }}}

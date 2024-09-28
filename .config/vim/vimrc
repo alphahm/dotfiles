@@ -27,8 +27,9 @@ filetype plugin indent on
 set expandtab softtabstop=4 shiftwidth=4 tabstop=4
 set autoindent
 set smartindent
+" }}}
 
-" search
+" search {{{
 set incsearch
 " center search results, jumps etc.
 nnoremap n nzz
@@ -40,6 +41,10 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
+" search for visually selected text
+" adapted from https://vim.fandom.com/wiki/Search_for_visually_selected_text
+vnoremap * y/\V<C-R>=escape(@",'/\')<CR><CR>zz
+vnoremap # y?\V<C-R>=escape(@",'/\')<CR><CR>zz
 " }}}
 
 " buffers {{{
@@ -53,7 +58,6 @@ nnoremap <silent> <Left> :bprev<cr>
 " split below and right by default
 set splitbelow splitright
 " }}}
-
 
 " plugins {{{
 call plug#begin()

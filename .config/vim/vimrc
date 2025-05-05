@@ -78,6 +78,17 @@ call plug#end()
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>g :Rg<cr>
 nnoremap <leader>b :Buffers<cr>
+
+" do not match filenames when using ripgrep
+" --delimiter --nth 4.. (4th and beyond) should be the content
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>),
+  \   1,
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),
+  \   <bang>0
+  \ )
+
 " }}}
 
 " lightline {{{

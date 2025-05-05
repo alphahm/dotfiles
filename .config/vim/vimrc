@@ -49,9 +49,6 @@ vnoremap # y?\V<C-R>=escape(@",'/\')<CR><CR>zz
 
 " buffers {{{
 set hidden
-" toggle buffers with easier shortcut
-nnoremap <silent> <Right> :bnext<cr>
-nnoremap <silent> <Left> :bprev<cr>
 " }}}
 
 " windows {{{

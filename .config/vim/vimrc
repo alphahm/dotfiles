@@ -68,6 +68,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'unblevable/quick-scope'
 " needs +lua
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " }}}
@@ -87,6 +88,14 @@ command! -bang -nargs=* Rg
   \   <bang>0
   \ )
 
+" }}}
+
+" coc {{{
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <F2> <Plug>(coc-diagnostic-prev)
+nmap <silent> <S-F2> <Plug>(coc-diagnostic-next)
+nmap <Leader>ca <Plug>(coc-codeaction-cursor)
 " }}}
 
 " lightline {{{

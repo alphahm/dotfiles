@@ -101,6 +101,7 @@ nmap <Leader>ca <Plug>(coc-codeaction-cursor)
 " lightline {{{
 set laststatus=2
 let g:lightline = {
+    \ 'colorscheme': 'catppuccin',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
